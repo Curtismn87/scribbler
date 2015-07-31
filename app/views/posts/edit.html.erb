@@ -8,3 +8,7 @@
 
 <%=  f.submit "Edit Post" %>
 <% end %>
+
+  <%= form_for(@post, method: :delete) do |f| %>
+  <%= f.submit "Delete Post", class: "delete" %>
+  <% end %>

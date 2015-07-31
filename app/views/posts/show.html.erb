@@ -1,4 +1,4 @@
-<%= link_to "New Post", edit_post_path %>
+<%= link_to "New Post", new_post_path %>
 <h3> <%= @post.post_body %> </h2>
 <h4> <%= @post.author %> </h4>
 <h5> <%= @post.create_at %> </h5>
@@ -10,3 +10,5 @@
 <h4> <%= comment.name %> </h4>
 <h5> <%= comment.create_at %> </h5>
 <% end %>
+
+<%= link_to "Edit Post", edit_post_path %>
