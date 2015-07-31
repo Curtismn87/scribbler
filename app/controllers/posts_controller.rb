@@ -21,9 +21,14 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path(@post)
   end
+def update
+  @post = Post.find(params[:id])
+  @post.update(post_params)
+  redirect_to post_path(@post)
 
+end
   private
   def post_params
   params.require(:post).permit(:author, :post_body, :created_at)
