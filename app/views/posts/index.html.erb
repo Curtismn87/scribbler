@@ -2,6 +2,6 @@
 <%= link_to "New Post",  new_post_path%>
 <% @posts.each do |post| %>
 <h2> <%= link_to post.post_body, post %> </h2>
-<h4> <%= post.author %> </h4>
+<h4> - <%= post.author %> </h4>
 <h5> <%= post.create_at %> </h5>
 <% end %>
