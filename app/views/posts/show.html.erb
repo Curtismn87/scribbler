@@ -4,10 +4,12 @@
 
 <h3>Comments:</h3>
 <%= link_to "New Comment",  new_post_comment_path(@post)%>
+
+<!-- Make sure to indent your code when appropriate. Makes it a lot more readable! -->
 <% @post.comments.each do |comment| %>
-<h3> <%= link_to comment.comment_body, post_comment_path(@post, comment) %> </h3>
-<h4> - <%= comment.name %> </h4>
-<h5> <%= comment.create_at %> </h5>
+  <h3> <%= link_to comment.comment_body, post_comment_path(@post, comment) %> </h3>
+  <h4> - <%= comment.name %> </h4>
+  <h5> <%= comment.create_at %> </h5>
 <% end %>
 
 <%= link_to "Edit Post", edit_post_path %>

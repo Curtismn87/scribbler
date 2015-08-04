@@ -33,3 +33,5 @@ ActiveRecord::Schema.define(version: 20150729130435) do
 
   add_foreign_key "comments", "posts"
 end
+
+# AM: Usually see `add_foreign_key` used with symbols (e.g., :comments) instead of strings.

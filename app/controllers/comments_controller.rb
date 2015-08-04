@@ -26,6 +26,8 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @post = Post.find(params[:post_id])
     @comment.update(comment_params)
+
+    # AM: From a UX perspective, might be better to redirect the user to the Post show page so they can see their comment.
     redirect_to root_url
   end
 
