@@ -1,14 +1,17 @@
+<!-- AM: Refrain from using <br> is possible. Take care of spacing in your CSS! -->
+
 <%= form_for @post do |f| %>
+  <%= f.label :author %><br />
+  <%= f.text_field :author %><br />
 
-<%= f.label :author %><br />
-<%= f.text_field :author %><br />
+  <!-- AM: Interesting! Have never used this size attribute before! -->
+  <%= f.label :post_body %><br />
+  <%= f.text_area :post_body, size: "60x12" %><br />
 
-<%= f.label :post_body %><br />
-<%= f.text_area :post_body, size: "60x12" %><br />
-
-<%=  f.submit "Edit Post" %>
+  <%=  f.submit "Edit Post" %>
 <% end %>
 
-  <%= form_for(@post, method: :delete) do |f| %>
+
+<%= form_for(@post, method: :delete) do |f| %>
   <%= f.submit "Delete Post", class: "delete" %>
-  <% end %>
+<% end %>
